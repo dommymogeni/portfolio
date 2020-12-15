@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>personal portfolio</title>
 </head>
@@ -17,7 +17,6 @@
         <div>
             <a href="#home">Home</a>
             <a href="#about-me">About me</a>
-            <a href="#project">projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact-me">Contact me</a>
         </div>
@@ -110,14 +109,17 @@
             </div>
         </div>
     </div>
-    
+
+
     <div class="contactme-container" id="contact-me">
-        <div class="row">
+        <div class="row-1">
             <div class="column">
                 ​<div class="contact-text">
                     <h2>Contact me</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis deleniti quis debitis? Ducimus, eligendi quia minima possimus magnam quod?
+                        You can fill the form below and the message would be deliverd to my E-mail.
+                        <br>
+                        Below are the usernames to my social media handles and you can reach to me through them
                     </p>
                 </div>
 
@@ -148,28 +150,47 @@
                 </div>                
             </div>
 
+            <?php
+                include("connection.php");
+                if (isset($_POST['submit'])) {
+                    $sql="INSERT INTO contacts (name, email, subject, message) VALUES ('$_POST[name]','$_POST[email]','$_POST[subject]','$_POST[message]')";
+                    mysqli_query($conn, $sql);
+                    echo("<script>alert('Message sent successfully')</script>");
+                }
+            ?>
+
             <div class="column">
                 <div class="contact-form">
                     <form action="#" method="POST">
+                        <code>
+                            * (Means that this is a required field)
+                        </code>
 
-                        <h2>Contact me</h2>
+                        <br><br>
 
-                        <label for="fname">Your Name *</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Please enter your name.." required>
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Please enter your name.." required>
 
-                        <label for="lname">Your Email</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your email address..">
+                        <label for="email">Your Email *</label>
+                        <input type="text" id="email" name="email" placeholder="Your email address.." required>
 
-                        <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="" required>
 
-                        <input type="submit" value="Submit">
+                        <label for="subject">Message *</label>
+                        <textarea id="message" name="message" placeholder="Write something.." style="height:80px"></textarea>
+
+                        <input name="submit" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    
+    <footer>
+        <div class="copyright">
+            <p style="text-align:center">&copy; 2020 | Amin Bashir Personal Portfolio</p>
+        </div>
+    </footer>
 </body>
 </html>
