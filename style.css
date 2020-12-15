@@ -132,6 +132,11 @@ nav .sign-button a:hover {
     width: 100%;
 }
 
+.column {
+    flex: 50%;;
+    padding: 10px;
+}
+
 .img-wrapper img{
     width: 100%;
 }
@@ -217,3 +222,112 @@ nav .sign-button a:hover {
     color:#fff!important;
     background-color:crimson!important
 }
+
+/* social media icons */
+.contactme-container {
+    padding: 10px 40px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.contact-icons{
+    padding: 10px;
+}
+
+.contact-icons ul {
+    list-style: none;
+}
+
+.contact-icons ul a {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.contact-icons ul li {
+    margin-bottom: 8px;
+}
+
+.contact-icons ul li i {
+    line-height: 60px;
+    transition: .6s;
+    color: #000;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.contact-icons ul li i:hover{
+    background-color: crimson;
+    color: ivory;
+}
+
+form h2{
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #00b334;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+  }
+  form label {
+    margin-bottom: 5px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  form input,
+  textarea {
+    padding: 15px 20px;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+  }
+  form button {
+    width: 100%;
+    background: blue !important;
+    color: white !important;
+    padding: 12px 15px;
+  }
+  form button:hover {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .control-label {
+    display: inline;
+  }
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
