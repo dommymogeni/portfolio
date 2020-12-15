@@ -9,7 +9,13 @@
 }
   
 /* general styles */
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    background-color: #cccccc;
+}
 
 /* navbar styling */
 nav {
@@ -20,6 +26,7 @@ nav {
     font-size: 0.9em;
     background: #000000;
     padding: 20px;
+    position: sticky;
 }
   
 nav a {
@@ -29,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00b334;
+    color: crimson;
     border: none;
 }
 
@@ -48,7 +55,165 @@ nav .sign-button a{
 }
 
 nav .sign-button a:hover {
-    border: solid 2px #00b334;
+    border: solid 2px crimson;
+}
+
+/* welcoming information of the page */
+.intro-landing{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.3), #000), url('https://github.com/aminbashir/amin-porfolio/raw/main/amin.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.intro-container{
+    width: 480px;
+    line-height: 2.5em;
+    color: #fff;
+    padding:20px;
+    opacity: .9;
+    position: absolute;
+    top: 40%;
+    margin-left: 30px;
+}
+
+.intro-container #intro-text-1 {
+    font-size: 16pt;
+    padding-bottom: 1.5rem;
+}
+
+.intro-container #intro-text-2 {
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: crimson;
+    padding-bottom: 1.5rem;
+}
+
+.intro-container #intro-text-3 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+/* about me container */
+.aboutme-container {
+    padding: 10px 30px;
+    background-color: #c0b9b9dc;
+    box-sizing: border-box;
+}
+
+.aboutme-container .aboutme-info-holder{
+    padding: 10px 0px;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.aboutme-info-header h2 {
+    font-size: 4rem;
+    color: crimson;
+    font-weight: bolder;
+    padding-bottom: 4px;
 }
 
 
+.aboutme-card{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    margin-bottom: 1rem ;
+}
+
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.img-wrapper img{
+    width: 100%;
+}
+
+.img-wrapper{
+    flex: 1;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-1 {
+    flex: 30%;;
+    padding: 10px;
+}
+
+.column-2 {
+    flex: 70%;
+    padding: 10px;
+}
+
+.aboutme-info-text p {
+    line-height: 1.52em;
+    font-size: 14pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.skills-container{
+    padding: 10px 40px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.skills-container h2{
+    font-size: 4rem;
+    color: crimson;
+    font-weight: bolder;
+    padding-bottom: 4px;
+}
+
+.skills-container .skill-text p {
+    line-height: 1.52em;
+    font-size: 14pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.graph-section {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+.skill-graphs {
+    margin-top: 25px;
+}
+
+.graph-spacing {
+    padding-bottom: 15px;
+}
+
+.graph-spacing .graph-title {
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+/* width using percentages */
+.w-80{
+    width: 80%;
+    text-align: center;
+    color:#fff!important;
+    background-color:crimson!important
+}
+
+.w-60{
+    width: 78%;
+    text-align: center;
+    color:#fff!important;
+    background-color:crimson!important
+}
+
+.w-58{
+    width: 66%;
+    text-align: center;
+    color:#fff!important;
+    background-color:crimson!important
+}
